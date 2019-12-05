@@ -1,5 +1,5 @@
 <?php 
 
-	echo 'Estou no admin';
+	echo 'Estou no admin!';   
 
  ?>
