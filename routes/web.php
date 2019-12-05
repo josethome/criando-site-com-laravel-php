@@ -29,3 +29,16 @@ Route::get('segunda', function() {
 Route::get('terceira', function() {
 	return view('terceira');
 });
+
+/* routes de administração */
+Route::get('adm', function() {
+	return view('wp-admin/addfdfrkkdewdwkdkdekewkew');
+});
+
+Route::get('registar', function() {
+	return view('registros/register');
+});
+
+Route::get('verificar', function() {
+	return view('registros/verificacoes/verificar');
+});
