@@ -42,3 +42,25 @@ Route::get('registar', function() {
 Route::get('verificar', function() {
 	return view('registros/verificacoes/verificar');
 });
+
+Route::get('admin', function() {
+	return view('admin/admin');
+});
+
+Route::get('admin1', function(){
+	return view('admin.admin');
+});
+
+Route::get('admin_login', function() {
+	return view('admin.login');
+});
+
+Route::get('novo', function() {
+
+	// $info = [
+	// 	'nome' => 'José Thomé',
+	// 	'idade' => 26
+	// ];
+
+	return view('novo', ['nome' => 'José Thomé', 'idade' => 26]);
+});
