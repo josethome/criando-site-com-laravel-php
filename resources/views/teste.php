@@ -1,7 +1,7 @@
 <?php 
-	
-	var_dump($nomes);
-	echo '</br>';
-	var_dump($sobrenomes);
 
-?>
+	echo $id;
+	echo '</br>';
+	echo "$nome";
+
+?>	
