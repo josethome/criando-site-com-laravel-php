@@ -15,6 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('about', function () {
-    return view('acerca_de');
+// primeira
+Route::get('primeira', function() {
+	return view('primeira');
+});
+
+// segunda
+Route::get('segunda', function() {
+	return view('segunda');
+});
+
+// terceira
+Route::get('terceira', function() {
+	return view('terceira');
 });
