@@ -15,14 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('dados/{id_medico}/{id_consulta}', function($id_medico, $id_consulta) {
-	return view('dados')->
-		with('id_medico', $id_medico)->
-		with('id_consulta', $id_consulta);
-});
+// Route::get('medicos', function() {
 
-Route::get('teste/{id?}/{nome?}', function($id = 0, $nome = 'José') {
-	return view('teste')->
-		with('id', $id)->
-		with('nome', $nome);
-});
+// });
+
+Route::get('medicos', ['uses' => 'medicosController@GetMedicos']);
+Route::get('medicosApagar', ['uses' => 'medicosController@EliminarMedicos']);
