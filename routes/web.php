@@ -70,26 +70,26 @@ Route::get('novo', function() {
 	return view('novo')->with('nome', 'José Thomé');
 });
 
-Route::get('medicos_da_clinica', function() {
+Route::get('medicos_da_clinica/{id_medico}', function($id_medico) {
 
-	$medicos = [
+	
 
-	0 => 	[
-				'nome_medico' => 'Eduardo',
-				'especialidade' => 'Ortopedista'
-			],
-
-	1 => 	[
-				'nome_medico' => 'Maria',
-				'especialidade' => 'Geral'
-			],
-
-	2 =>	[
-				'nome_medico' => 'Joaquim',
-				'especialidade' => 'Cirurgião'
-			]
-		];
-
-	return view('medicos')->with('dados', $medicos);
+	return view('medicos')->with('id', $id_medico);
 });
 
+Route::get('teste', function() {
+	
+	$nomes = [
+		'Fabiana',
+		'Gabriel',
+		'Ana Clara'
+	];
+
+	$sobrenomes = [
+		'Rocha',
+		'Pereira',
+		'Smith'
+	];
+
+	return view('teste', compact('nomes', 'sobrenomes'));
+});

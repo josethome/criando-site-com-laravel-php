@@ -1,12 +1,24 @@
 <?php 
 
-	//echo "<p>$nome_medico, médico $especialidade.</p>";
+	$medicos = [
 
-	//var_dump($dados);
+	0 => 	[
+				'nome_medico' => 'Eduardo',
+				'especialidade' => 'Ortopedista'
+			],
 
-	foreach ($dados as $medico) {
-		
-		echo '<p>Nome: '. $medico['nome_medico'] . ' | Especialidade: '. $medico['especialidade'];
-	}
+	1 => 	[
+				'nome_medico' => 'Maria',
+				'especialidade' => 'Geral'
+			],
+
+	2 =>	[
+				'nome_medico' => 'Joaquim',
+				'especialidade' => 'Cirurgião'
+			]
+		];
+
+	echo 'Nome do médico: '.$medicos[$id]['nome_medico']. '</br>Especialidade:
+	 '.$medicos[$id]['especialidade'];
 
 ?>
