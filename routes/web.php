@@ -15,12 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('usuarios', 'usuariosController@MostrarUsuarios');
-
-Route::get('contato', function(){
-	return view('contato');
-});
-
-Route::get('sobre', function(){
-	return view('sobre');
+Route::get('usuarios', function() {
+	return view('usuarios');
 });
