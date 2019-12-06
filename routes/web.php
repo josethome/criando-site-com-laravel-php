@@ -31,3 +31,9 @@ Route::get('/', function () {
 // }]);
 
 Route::get('tratar_usuario/{usuario}/{senha}', 'usuarioController@Tratar');
+
+Route::get('indice', function() {
+	return view('indice');
+});
+
+Route::resource('usuarios', 'usuariosController');
