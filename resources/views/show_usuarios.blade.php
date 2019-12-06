@@ -31,6 +31,31 @@
 	{{-- bloco de código - IF statement --}}
 	@unless(count($usuarios) === 0)
 		<p>Ativou o código do unless.</p>
-	@endunless
+	@endunless 
 
+	@php
+
+		$nome = 'José';
+		
+	@endphp
+
+	{{-- 
+		@isset($nome)
+
+			<p>A variável $nome está definida e tem o valor: {{ $nome }}</p>
+
+		@endisset
+
+		@empty ($nome)
+
+			<p>A variável $nome tem valor, e o valor: {{ $nome }}</p>
+		    
+		@endempty
+	--}}
+
+	@for ($i = 0; $i < 100; $i++)
+		
+ 		<p>{{ $i }}</p>
+
+	@endfor
 </div>
