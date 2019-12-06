@@ -1,4 +1,4 @@
-<form method="POST" action="tratar">
+<form method="POST" action="usuarios">
 	
 	{{ csrf_field() }}
 
