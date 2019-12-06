@@ -1,18 +1,20 @@
-<div>
-	<p>Primeira secção da página</p>
-</div>
+<h1>TESTES DE LOOPS</h1>
 
-@component('componentes_mensagem')
-	{{-- título --}}
-	@slot('titulo')
-		Este é o título alterado.	
-	@endslot
+{{-- for loop --}}
 
-	@slot('mensagem')
-		Este é o texto que vai surgir na mensagem.
-	@endslot
-@endcomponent
+{{-- @for($m = 0; $m <= $max; $m ++)
+	<p>O valor de $m é: {{ $m }}</p>
+@endfor --}}
 
-<div>
-	<p>Fundo da página</p>
-</div>
+{{-- foreach --}}
+@foreach ($nomes as $nome)
+	
+	@if($loop->last)
+		
+		<p style="color: red">{{ $nome }}</p>
+	@else
+
+		<p>{{ $nome }}</p>
+
+	@endif 
+@endforeach
