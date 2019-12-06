@@ -29,3 +29,6 @@ Route::get('medicosApagar', ['uses' => 'medicosController@EliminarMedicos']);
 Route::get('administrador/configuracoes/editar', ['as' => 'admin_cfg_edit', function(){
 	return view('admin/config/editar');
 }]);
+
+
+Route::get('ver_usuario/{nome}/{senha}', 'usuarioController@ApresentarUsuario');
