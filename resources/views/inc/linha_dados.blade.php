@@ -1,0 +1,1 @@
+<p>Nome <strong> {{ $nome }}</strong></p>
