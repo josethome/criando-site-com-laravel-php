@@ -15,19 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('medicos', function() {
-
-// });
-
-// Route::get('medicos', ['uses' => 'medicosController@GetMedicos']);
-// Route::get('medicosApagar', ['uses' => 'medicosController@EliminarMedicos']);
-
-// Route::get('administrador/perfil/editar', array('as' => 'adm_per_edit', function() {
-// 	return route('adm_per_edit');
-// }));
-
-// Route::get('administrador/configuracoes/editar', ['as' => 'admin_cfg_edit', function(){
-// 	return view('admin/config/editar');
-// }]);
-
 Route::get('usuarios', 'usuariosController@MostrarUsuarios');
+
+Route::get('contato', function(){
+	return view('contato');
+});
+
+Route::get('sobre', function(){
+	return view('sobre');
+});
