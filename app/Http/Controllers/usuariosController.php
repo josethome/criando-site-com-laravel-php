@@ -10,13 +10,20 @@ class usuariosController extends Controller
     public function MostrarUsuarios() {
 
     	// usuários da nossa aplicação
-    	$usuarios = [
+    	// $usuarios = [
+    	// 	'Marta',
+    	// 	'Bernardo',
+    	// 	'Bianca'
 
-    		'Marta',
-    		'Bernardo',
-    		'Bianca'
+    	// ];
 
-    	];
+    	// temos apenas um usuário inscrito
+    	// $usuarios = [
+    	// 	'Regina'
+    	// ];
+
+    	// usuários vazio
+    	$usuarios = [];
 
     	// mostrar a view com usuários
     	return view('show_usuarios', compact('usuarios'));
