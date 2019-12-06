@@ -15,4 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('teste', 'testeController@Executar');
+Route::get('show', 'usuariosController@show');
+Route::post('tratar', 'usuariosController@tratar');
