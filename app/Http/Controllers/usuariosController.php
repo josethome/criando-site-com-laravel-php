@@ -7,44 +7,19 @@ use Illuminate\Http\Request;
 class usuariosController extends Controller
 {
     
-    public function index()
-    {
-        return 'Estou no index.';
-    }
+    public function MostrarUsuarios() {
 
-    
-    public function create()
-    {
-        return 'Estou no create.';
-    }
+    	// usuários da nossa aplicação
+    	$usuarios = [
 
-    
-    public function store(Request $request)
-    {
-        //
-    }
+    		'Marta',
+    		'Bernardo',
+    		'Bianca'
 
-    
-    public function show($id)
-    {
-        return 'O usuário a apresentar tem o ID: ' . $id;
-    }
+    	];
 
-    
-    public function edit($id)
-    {
-        //
-    }
+    	// mostrar a view com usuários
+    	return view('show_usuarios', compact('usuarios'));
 
-    
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    
-    public function destroy($id)
-    {
-        //
     }
 }

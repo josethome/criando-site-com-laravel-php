@@ -30,10 +30,4 @@ Route::get('/', function () {
 // 	return view('admin/config/editar');
 // }]);
 
-Route::get('tratar_usuario/{usuario}/{senha}', 'usuarioController@Tratar');
-
-Route::get('indice', function() {
-	return view('indice');
-});
-
-Route::resource('usuarios', 'usuariosController');
+Route::get('usuarios', 'usuariosController@MostrarUsuarios');
