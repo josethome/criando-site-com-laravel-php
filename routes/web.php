@@ -19,16 +19,15 @@ Route::get('/', function () {
 
 // });
 
-Route::get('medicos', ['uses' => 'medicosController@GetMedicos']);
-Route::get('medicosApagar', ['uses' => 'medicosController@EliminarMedicos']);
+// Route::get('medicos', ['uses' => 'medicosController@GetMedicos']);
+// Route::get('medicosApagar', ['uses' => 'medicosController@EliminarMedicos']);
 
 // Route::get('administrador/perfil/editar', array('as' => 'adm_per_edit', function() {
 // 	return route('adm_per_edit');
 // }));
 
-Route::get('administrador/configuracoes/editar', ['as' => 'admin_cfg_edit', function(){
-	return view('admin/config/editar');
-}]);
+// Route::get('administrador/configuracoes/editar', ['as' => 'admin_cfg_edit', function(){
+// 	return view('admin/config/editar');
+// }]);
 
-
-Route::get('ver_usuario/{nome}/{senha}', 'usuarioController@ApresentarUsuario');
+Route::get('tratar_usuario/{usuario}/{senha}', 'usuarioController@Tratar');
