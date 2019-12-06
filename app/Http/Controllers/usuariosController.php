@@ -15,4 +15,4 @@ class usuariosController extends Controller
     public function tratar(Request $dados) {
     	return 'Cheguei!';		
     }
-}
+} 
