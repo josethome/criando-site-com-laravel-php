@@ -1,20 +1,5 @@
-<h1>TESTES DE LOOPS</h1>
+<h1>TESTES DE VIEWS PARA COLEÇÕES</h1>
 
-{{-- for loop --}}
+@each('linha', $nomes, 'nome', 'vazio')
 
-{{-- @for($m = 0; $m <= $max; $m ++)
-	<p>O valor de $m é: {{ $m }}</p>
-@endfor --}}
 
-{{-- foreach --}}
-@foreach ($nomes as $nome)
-	
-	@if($loop->last)
-		
-		<p style="color: red">{{ $nome }}</p>
-	@else
-
-		<p>{{ $nome }}</p>
-
-	@endif 
-@endforeach

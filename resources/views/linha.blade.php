@@ -1,0 +1,1 @@
+<li>Nome: {{ $nome }} </li>

@@ -9,16 +9,19 @@ class testeController extends Controller
     public function Executar() {
 
     	// nomes
+    	// $nomes = [
+    	// 	'José',
+    	// 	'Marina',
+    	// 	'Juca',
+    	// 	'Francisco',
+    	// 	'Mariana'
+    	// ];  
+
     	$nomes = [
-    		'José',
-    		'Marina',
-    		'Juca',
-    		'Francisco',
-    		'Mariana'
-    	];    		
+    		
+    	];  		
 
     	// view
     	return view('teste', compact('nomes'));
-
     }
 }
