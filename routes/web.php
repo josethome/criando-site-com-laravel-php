@@ -15,5 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('show', 'usuariosController@show');
-Route::post('tratar', 'usuariosController@tratar');
+Route::resource('usuarios', 'usuariosController');
