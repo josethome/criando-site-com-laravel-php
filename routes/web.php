@@ -15,4 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('usuarios', 'usuariosController');
+//Route::resource('usuarios', 'usuariosController');
+
+Route::get('teste', function() {
+
+	// pegar todos os registros da bd
+	//$dados = DB::table('clientes')->get();
+	
+	// pegar o registro do joao
+	$dados = DB::table('clientes')->where('cidade', 'Rio de Janeiro')->get();
+
+	return $dados;
+});
