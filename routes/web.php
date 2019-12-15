@@ -22,7 +22,7 @@ Route::get('teste', function() {
 	// pegar todos os registros da bd
 	//$dados = DB::table('clientes')->get();
 	
-	// pegar o registro dos clientes
+	// pegar o registro dos clientes no banco de dados
 	$dados = DB::table('clientes')->where('cidade', 'Rio de Janeiro')->get();
 
 
