@@ -15,26 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::resource('usuarios', 'usuariosController');
-
-// Route::get('teste', function() {
-
-// 	// pegar todos os registros da bd
-// 	//$dados = DB::table('clientes')->get();
-	
-// 	// pegar o registro dos clientes no banco de dados
-// 	$dados = DB::table('clientes')->where('cidade', 'Rio de Janeiro')->get();
-
-// 	return $dados;
-// });
-
 Route::get('teste', function() {
 
-	// pegar todos os registros da bd
-	//$dados = DB::table('clientes')->get();
-	
-	// pegar o registro dos clientes no banco de dados
-	$dados = DB::table('clientes')->where('cidade', 'Rio de Janeiro')->get();
+	// eliminar todos os dados da tabela 'clientes'
+	DB::table('clientes')->delete();
 
-	return $dados;
+	return 'OK';
 });
