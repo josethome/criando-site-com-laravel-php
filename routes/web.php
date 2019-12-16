@@ -15,10 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('teste', function() {
-
-	// testes à DB
-	// Query Builder
-
-	return DB::table('clientes')->get();	
-});
+Route::get('teste', 'testeController@teste');
