@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\noticias;
 use Illuminate\Http\Request;
+use App\noticias;
 
-class NoticiasController extends Controller
+class noticiasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,9 @@ class NoticiasController extends Controller
      */
     public function index()
     {
-        //
+        // Apresentar uma lista dos registros
+        $dados = noticias::all();
+        return view('noticias_show', compact('dados'));
     }
 
     /**
@@ -24,7 +26,9 @@ class NoticiasController extends Controller
      */
     public function create()
     {
-        //
+        
+        return view('noticias_new');
+        //return 'Sim';        
     }
 
     /**
@@ -35,7 +39,21 @@ class NoticiasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $noticia = new noticias;
+        $noticia->titulo = $request->text_titulo;
+        $noticia->texto = $request->text_texto;
+        $noticia->autor = $request->text_autor;
+        $noticia->save();
+
+        return redirect('noticias/create');
+
+        // $dados = [
+        //     $request->text_titulo,
+        //     $request->text_texto,
+        //     $request->text_autor
+        // ];
+        // return $dados;
     }
 
     /**
@@ -46,7 +64,7 @@ class NoticiasController extends Controller
      */
     public function show($id)
     {
-        $dados = noticias::where('id_noticia', $id)->get();
+        $dados = noticias::where('id_noticias', $id)->get();
         return $dados;
     }
 
