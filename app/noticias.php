@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class teste extends Model
+class noticias extends Model
 {
-   protected $table = 'clientes'; 
+    //
 }

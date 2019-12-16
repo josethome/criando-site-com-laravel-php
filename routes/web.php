@@ -1,6 +1,6 @@
 <?php
 
-use App\teste;
+use App\clientes;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('c', function() {
-
-	// Query Builder
-	//$dados = DB::table('clientes')->get();
-
-	// Eloquent ORM
-	$dados = teste::where('nome', 'Joao')->get();
-
-	return $dados;
-});
+Route::resource('noticias', 'NoticiasController');
