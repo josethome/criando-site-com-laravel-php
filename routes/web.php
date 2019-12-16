@@ -17,8 +17,8 @@ Route::get('/', function () {
 
 Route::get('teste', function() {
 
-	// eliminar todos os dados da tabela 'clientes'
-	DB::table('clientes')->delete();
+	// testes à DB
+	// Query Builder
 
-	return 'OK';
+	return DB::table('clientes')->get();	
 });
