@@ -1,5 +1,7 @@
 <?php
 
+use App\teste;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,5 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Testando as rotas
-Route::get('teste', 'testeController@teste');
+Route::get('c', function() {
+
+	// Query Builder
+	//$dados = DB::table('clientes')->get();
+
+	// Eloquent ORM
+	$dados = teste::where('nome', 'Joao')->get();
+
+	return $dados;
+});
