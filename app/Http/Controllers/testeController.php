@@ -13,7 +13,7 @@ class testeController extends Controller
    		//$dados = DB::table('clientes')->get();
    		$id = 123;
    		$dados = DB::table('clientes')
-   			->where('nome', 'Alberto')
+   			->where('nome', 'Joao')
    			->orWhere('nome', 'Gabriela')
    			->get();
 

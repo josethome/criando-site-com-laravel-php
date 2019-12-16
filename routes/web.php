@@ -15,4 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Testando as rotas
 Route::get('teste', 'testeController@teste');
