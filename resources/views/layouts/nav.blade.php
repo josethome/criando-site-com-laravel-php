@@ -12,7 +12,7 @@
 	<div class="col-md-12" style="padding: 5px 0px">
 
 		{{-- Início --}}
-		<a href="#" class="btn btn-primary" role="button">
+		<a href="/" class="btn btn-primary" role="button">
 			<span class="glyphicon glyphicon-home"></span>
 		Início</a>
 
