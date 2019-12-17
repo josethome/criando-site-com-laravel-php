@@ -27,6 +27,25 @@ class noticiasController extends Controller
     public function store(Request $request)
     {
         // Armazena os registros na base de dadsos
+        $noticia = new noticias;
+
+        $noticia->titulo = $request->text_titulo;
+        $noticia->texto = $request->text_texto;
+        $noticia->autor = $request->text_autor;
+
+        // Visibilidade
+        if(isset($request->check_visivel)) {
+            $noticia->visivel = 1;
+        }
+        else {
+            $noticia->visivel = 0;
+        }
+
+        // Salvar notícia
+        $noticia->save();
+
+        // Redirecionamento para o ínicio (home)
+        return redirect('/');
     }
 
     

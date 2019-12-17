@@ -3,7 +3,7 @@
 @section('conteudo')
 
 	{{-- Apresenta o formuulário para criação de nova notícia --}}
-	<form @method('POST') action="">
+	<form method="POST" action="/salvar_noticia">
 
 		{{-- CSRF --}}
 		{{ csrf_field() }}
