@@ -71,4 +71,11 @@ class noticiasController extends Controller
     {
         // Excluir uma notícia na base de dados
     }
+
+    public function mostrarTabelaGestao() 
+    {
+        // Carregar todas as notícias e apresentar em formato de grid para gestão
+        $noticias = noticias::all();
+        return view('noticias_gestao', compact('noticias'));
+    }
 }

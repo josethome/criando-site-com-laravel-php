@@ -17,12 +17,12 @@
 		Início</a>
 
 		{{-- Nova notícia --}}
-		<a href="nova_noticia" class="btn btn-primary" role="button">
+		<a href="/nova_noticia" class="btn btn-primary" role="button">
 			<span class="glyphicon glyphicon-plus"></span>
 		Nova notícia</a>
 
 		{{-- Gestão --}}
-		<a href="#" class="btn btn-primary" role="button">
+		<a href="/gerir_noticias" class="btn btn-primary" role="button">
 			<span class="glyphicon glyphicon-cog"></span>
 		Gestão</a>
 
