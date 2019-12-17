@@ -17,7 +17,7 @@
 		Início</a>
 
 		{{-- Nova notícia --}}
-		<a href="#" class="btn btn-primary" role="button">
+		<a href="nova_noticia" class="btn btn-primary" role="button">
 			<span class="glyphicon glyphicon-plus"></span>
 		Nova notícia</a>
 

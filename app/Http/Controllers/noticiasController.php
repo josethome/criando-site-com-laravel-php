@@ -13,8 +13,6 @@ class noticiasController extends Controller
         // Vai buscar todas as notícias
         $dados = noticias::all();
 
-
-
         return view('noticias_index', compact('dados'));
     }
 
@@ -22,6 +20,7 @@ class noticiasController extends Controller
     public function create()
     {
         // Apresentar página de criação de nova notícia
+        return view('noticias_create');
     }
 
     
