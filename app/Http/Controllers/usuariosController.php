@@ -8,7 +8,21 @@ class usuariosController extends Controller
 {
     public function MostrarFormLogin() {
 
-    	// Apreseentar o formulário de login
+    	// Apresentar o formulário de login
     	return view('usuarios_login');
+    }
+
+    public function FazerLogin(Request $request) {
+
+    	// Verifição de preenchimento dos campos
+    	$this->validate($request, [
+
+    		'text_usuario' => 'required',
+    		'text_senha' => 'required|min:3'	
+    	]);
+
+    	// Depois da verificação: será consultada a base de dados
+
+    	return 'Validado!';
     }
 }

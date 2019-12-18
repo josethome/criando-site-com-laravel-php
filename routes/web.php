@@ -25,4 +25,6 @@ Route::get('deletar_noticia/{id}', "noticiasController@destroy");
 Route::get('editar_noticia/{id}', 'noticiasController@edit');
 Route::post('atualizar_noticia/{id}', 'noticiasController@update');
 
+// Formulário de login
 Route::get('usuarios_login', 'usuariosController@MostrarFormLogin');
+Route::post('usuarios_fazer_login', 'usuariosController@FazerLogin');
