@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class usuariosController extends Controller
 {
@@ -14,15 +15,10 @@ class usuariosController extends Controller
 
     public function FazerLogin(Request $request) {
 
-    	// Verifição de preenchimento dos campos
-    	$this->validate($request, [
+    	// Encriptação da senha
+    	// $request->test = senha;
 
-    		'text_usuario' => 'alpha',
-    		'text_senha' => 'required|min:3'	
-    	]);
-
-    	// Depois da verificação: será consultada a base de dados
-
-    	return 'Validado!';
+    	$senha = Hash::make($request->text_senha);
+    	return($request->text_senha . ' - ' . $senha);
     }
 }
