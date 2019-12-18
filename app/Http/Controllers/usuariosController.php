@@ -17,7 +17,7 @@ class usuariosController extends Controller
     	// Verifição de preenchimento dos campos
     	$this->validate($request, [
 
-    		'text_usuario' => 'required',
+    		'text_usuario' => 'alpha',
     		'text_senha' => 'required|min:3'	
     	]);
 

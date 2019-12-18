@@ -11,14 +11,7 @@
 		<div class="col-md-4 col-md-offset-4">
 
 			{{-- Erros (validação) --}}
-			@if(count($errors) != 0)
-
-				{{-- {{ dd($errors) }} --}}
-				@foreach ($errors->all() as $erro)
-					<p class="alert alert-danger">{{ $erro }}</p>
-				@endforeach
-				
-			@endif
+			@include('inc.erros')			
 			
 			<form method="POST" action="/usuarios_fazer_login"> 
 
