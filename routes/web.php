@@ -28,3 +28,6 @@ Route::post('atualizar_noticia/{id}', 'noticiasController@update');
 // Formulário de login
 Route::get('usuarios_login', 'usuariosController@MostrarFormLogin');
 Route::post('usuarios_fazer_login', 'usuariosController@FazerLogin');
+
+// Inserir novos usuários
+Route::get('inserir_usuario', 'usuariosController@InserirUsuario');

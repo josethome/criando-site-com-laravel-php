@@ -31,10 +31,12 @@
 			  
 			  {{-- Submit --}}
 			  <button type="submit" class="btn btn-primary">Login</button>			
-			</form>
+			</form><hr>
 
-		</div>
-
+				{{-- Criar nova conta --}}
+				<a href="/inserir_usuario">Criar nova conta.</a>
+		</div> 
+		
 	</div>
 
 @endsection
