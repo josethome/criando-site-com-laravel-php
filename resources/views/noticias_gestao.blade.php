@@ -23,7 +23,6 @@
 
 		@endforeach
 
-
 	@endif
 
 @endsection

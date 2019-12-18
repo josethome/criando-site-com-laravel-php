@@ -16,9 +16,17 @@
 	<div class="col-md-3 text-right">
 		
 		{{-- Visibilidade --}}
-		<a href="#">
-			<span class="glyphicon glyphicon-eye-open" style="margin-left: 10px"></span>
-		</a>
+		@if($noticia->visivel == 1)
+
+			<a href="colocar_invisivel/{{ $noticia->id_noticia }}">
+				<span class="glyphicon glyphicon-eye-open" style="margin-left: 10px"></span>
+			</a>
+		@else
+			<a href="colocar_visivel/{{ $noticia->id_noticia }}">
+				<span class="glyphicon glyphicon-eye-open" style="margin-left: 10px; color: #ddd"></span>
+			</a>
+
+		@endif
 		
 		{{-- Editar --}}
 		<a href="#">
@@ -26,10 +34,9 @@
 		</a>
 
 		{{-- Deletar --}}
-		<a href="#">
+		<a href="deletar_noticia/{{ $noticia->id_noticia }}">
 			<span class="glyphicon glyphicon-trash" style="margin-left: 10px"></span>
 		</a>
-
-
+		
 	</div>
 </div>

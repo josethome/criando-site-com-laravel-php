@@ -70,6 +70,8 @@ class noticiasController extends Controller
     public function destroy($id)
     {
         // Excluir uma notícia na base de dados
+        noticias::destroy($id);
+        return redirect('/gerir_noticias');
     }
 
     public function mostrarTabelaGestao() 
@@ -77,5 +79,23 @@ class noticiasController extends Controller
         // Carregar todas as notícias e apresentar em formato de grid para gestão
         $noticias = noticias::all();
         return view('noticias_gestao', compact('noticias'));
+    }
+
+    public function colocarVisivel($id) {
+
+         // Tornar visível uma notícia que está invisível
+        $noticia = noticias::find($id);
+        $noticia->visivel = 1;
+        $noticia->save();
+        return redirect('/gerir_noticias');
+    }
+
+     public function colocarInvisivel($id) {
+
+         // Tornar invisível uma notícia que está visível
+        $noticia = noticias::find($id);
+        $noticia->visivel = 0;
+        $noticia->save();
+        return redirect('/gerir_noticias');
     }
 }
