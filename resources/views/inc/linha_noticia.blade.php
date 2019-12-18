@@ -29,7 +29,7 @@
 		@endif
 		
 		{{-- Editar --}}
-		<a href="#">
+		<a href="editar_noticia/{{ $noticia->id_noticia }}">
 			<span class="glyphicon glyphicon-pencil" style="margin-left: 10px"></span>
 		</a>
 

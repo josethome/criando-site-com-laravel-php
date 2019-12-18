@@ -2,7 +2,7 @@
 
 @section('conteudo')
 
-	{{-- Apresenta o formuulário para criação de nova notícia --}}
+	{{-- Apresenta o formulário para criação de nova notícia --}}
 	<form method="POST" action="/salvar_noticia">
 
 		{{-- CSRF --}}

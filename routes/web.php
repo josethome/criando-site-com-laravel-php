@@ -20,3 +20,7 @@ Route::get('colocar_invisivel/{id}', 'noticiasController@colocarInvisivel');
 
 // Deletar notícias
 Route::get('deletar_noticia/{id}', "noticiasController@destroy");
+
+// Editar | Atualizar
+Route::get('editar_noticia/{id}', 'noticiasController@edit');
+Route::post('atualizar_noticia/{id}', 'noticiasController@update');

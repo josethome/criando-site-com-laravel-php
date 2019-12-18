@@ -58,12 +58,32 @@ class noticiasController extends Controller
     public function edit($id)
     {
         // Apresentar página para editar
+        $noticia = noticias::find($id);
+        return view('noticias_edit', compact('noticia'));
     }
 
    
     public function update(Request $request, $id)
     {
         // Atualização dos registros na base de dados: depois de editar
+        $noticia = noticias::find($id);
+
+        // Atualizar os seus campos
+        $noticia->titulo = $request->text_titulo;
+        $noticia->texto = $request->text_texto;
+        $noticia->autor = $request->text_autor;
+
+        // Visibilidade
+        if(isset($request->check_visivel)) {
+            $noticia->visivel = 1;
+        }
+        else {
+            $noticia->visivel = 0;
+        }  
+
+        $noticia->save();
+
+        return redirect('gerir_noticias');
     }
 
     
