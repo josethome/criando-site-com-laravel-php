@@ -16,11 +16,38 @@ class usuariosController extends Controller
 
     public function FazerLogin(Request $request) {
 
-    	// Encriptação da senha
-    	// $request->test = senha;
+    	// Verificar se os dados de login estão corretos
 
-    	$senha = Hash::make($request->text_senha);
-    	return($request->text_senha . ' - ' . $senha);
+
+    	// 1º - Vai buscar a conta do usuário
+    	$dados = usuarios::where('usuario', $request->text_usuario)->first();
+
+    	$resultado = "";
+
+    	if(count($dados) == 0) {
+
+    		$resultado = "Não existe está conta de usuário.";
+    	}
+    	else {
+
+    		// Foi encontrado o usuário 
+    		if(Hash::check($request->text_senha, $dados->senha)) {
+    			$resultado = "Login efetuado com sucesso.";
+    		} else {
+    			$resultado = "Login sem sucesso. Senha inválida.";
+    		}
+    	}
+
+    	return($resultado);
+
+    	// geraldo
+    	// senha: 123456
+
+    	// jose
+    	// senha: 123
+
+    	// $senha = Hash::make($request->text_senha);
+    	// return($request->text_senha . ' - ' . $senha);
     }
 
     public function InserirUsuario() {
