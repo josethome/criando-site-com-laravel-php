@@ -8,6 +8,41 @@ use App\usuarios;
 
 class usuariosController extends Controller
 {
+
+    // Sistema de Usuários
+    public function index() {
+
+        return view('usuario_frm_login');
+    }
+
+    // Login
+
+
+    // Recuperar senha
+    public function frmRecuperarSenha(){
+
+        // Apresentar formulário para recuperar senha
+        return view('usuario_frm_recuperar_senha');
+    }
+
+    public function executarRecuparSenha() {
+
+    }
+
+    // Criar nova conta
+    public function frmCriarNovaConta() {
+
+        // Apresentar o formulário de criação de nova conta
+        return view('usuario_frm_criar_conta');
+    }
+
+    public function executarCriacaoNovaConta() {
+
+        //Executar os proc. e verificações para criação de uma nova conta
+
+    }
+
+
     public function MostrarFormLogin() {
 
     	// Apresentar o formulário de login

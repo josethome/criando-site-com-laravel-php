@@ -32,6 +32,28 @@ Route::post('usuarios_fazer_login', 'usuariosController@FazerLogin');
 // Inserir novos usuários
 Route::get('inserir_usuario', 'usuariosController@InserirUsuario');
 
+
+// Verificação de sessão e logoff de usuários
 Route::get('/', function() {
 	return view('usuario_frm_login');
 });
+
+Route::get('/criar_conta', function() {
+	return view('usuario_frm_criar_conta');
+});
+
+Route::get('/recuperar_senha', function() {
+	return view('usuario_frm_recuperar_senha');
+});
+
+// Default
+Route::get('/', 'usuariosController@index');
+
+// Usuário - login
+
+
+// Usuário - recuperar senha
+Route::get('/usuario_frm_recuperar_senha', 'usuariosController@frmRecuperarSenha');
+
+// Usuário - nova conta
+Route::get('/usuario_frm_criar_conta', 'usuariosController@frmCriarNovaConta');

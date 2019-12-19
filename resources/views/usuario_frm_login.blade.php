@@ -1,10 +1,14 @@
 @extends('layouts.usuarios')
 
+{{-- LOGIN DE USUÁRIO --}}
+
 @section('conteudo')
 
 	<div class="row">
 		
 		<div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-12">
+
+			{{-- Apresentação de erros de validação --}}
 
 			<form method="POST" action="/">
 
@@ -24,26 +28,22 @@
 					<input type="password" class="form-control" id="id_text_senha" name="text_senha" placeholder="Senha do usuário" required>					
 				</div>
 
+				{{-- Links para criar nova conta de usuário --}}
+				<div class="text-center margin-top-20">
+					
+					<a href="/usuario_frm_criar_conta">Criar nova conta</a>
+					
+					{{-- Links para recuperar senha --}} 
+					<a href="/usuario_frm_recuperar_senha">Recuperar senha</a>				
+
+				</div>				
+
 				{{-- Submeter --}}
 				<div class="text-center">					
 					<button type="submit" class="btn btn-success btn-lg btn-custom">
 						<span class="glyphicon glyphicon-user img-circle text-success btn-icon"></span> Entrar
 					</button> 
-				</div>
-
-				{{-- Links para recuperar senha --}} 
-				<div class="text-center margin-top-20">
-					
-					<a href="#">Recuperar senha</a>
-
-				</div>
-
-				{{-- Links para criar nova conta de usuário --}} 
-				<div class="text-center">
-					
-					<a href="#">Criar nova conta</a>
-
-				</div>
+				</div>				
 
 			</form>
 			
