@@ -1,4 +1,9 @@
-/* Código adicional de CSS */
+/* Código adicional de CSS 
+ *
+ * Description: Sistema de Usuários
+ *
+ * Author: José A. Thomé
+*/
 
 .img-logo {
 	margin: auto;
@@ -10,9 +15,10 @@
 	margin-top: 20px;
 }
 
-.btn-custom {
-	width: 200px;
+.btn-custom {	
+	width: 240px;
 	padding: 1px 10px 3px 2px;
+	margin-top: 20px;
 	text-transform: uppercase;
 	border-radius: 50px;
 }
