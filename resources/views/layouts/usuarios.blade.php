@@ -10,26 +10,24 @@
     <link rel="stylesheet" href= {{ asset('css/bootstrap.min.css') }} >  
     <link rel="stylesheet" href= {{ asset('css/main.css') }} >  
 
-    <title>News App</title>
+    <title>Sistema de Usuário</title>
   </head>
   <body>
     <div class="container">
 
       <!-- Cabeçalho e barra de navegação -->
-      @include('layouts.nav')
-
       @include('inc.header')
 
       <!-- Conteúdo -->
       @yield('conteudo')
 
       <!-- Rodapé --> 
-      @include('layouts.rodape')  
+      {{-- @include('layouts.rodape')  --}} 
 
     </div>  
     
   <!-- jQquery (obrigatório para plugins JavaScript do Bootstrap) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src= {{ asset("js/bootstrap.min.js") }}></script>    
+  <script src= {{ asset('js/bootstrap.min.js') }}></script>    
   </body>
 </html>

@@ -31,3 +31,7 @@ Route::post('usuarios_fazer_login', 'usuariosController@FazerLogin');
 
 // Inserir novos usuários
 Route::get('inserir_usuario', 'usuariosController@InserirUsuario');
+
+Route::get('/', function() {
+	return view('usuario_frm_login');
+});

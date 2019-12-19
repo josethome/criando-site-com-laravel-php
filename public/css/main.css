@@ -1,0 +1,22 @@
+/* Código adicional de CSS */
+
+.img-logo {
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;		
+}
+
+.margin-top-20 {
+	margin-top: 20px;
+}
+
+.btn-custom {
+	padding: 1px 10px 3px 2px;
+	text-transform: uppercase;
+	border-radius: 50px;
+}
+
+.btn-icon {
+	padding: 8px;
+	background-color: #fff;
+}
