@@ -10,7 +10,7 @@
 
 			{{-- Apresentação de erros de validação --}}
 
-			<form method="POST" action="/">
+			<form method="POST" action="/usuario_executar_criar_conta">
 
 				{{-- CSRF --}}
 
@@ -19,25 +19,25 @@
 				{{-- Usuário --}}
 				<div class="form-group">
 					<label for="id_text_usuario">Usuário:</label>
-					<input type="text" class="form-control" id="id_text_usuario" name="text_usuario" placeholder="Nome do usuário" required>
+					<input type="text" class="form-control" id="id_text_usuario" name="text_usuario" placeholder="Nome do usuário">
 				</div> 
 
 				{{-- Senha --}}
 				<div class="form-group">
 					<label for="id_text_senha">Senha:</label>
-					<input type="password" class="form-control" id="id_text_senha" name="text_senha" placeholder="Senha do usuário" required>					
+					<input type="password" class="form-control" id="id_text_senha" name="text_senha" placeholder="Senha do usuário">					
 				</div>
 
 				{{-- Repetir Senha --}}
 				<div class="form-group">
 					<label for="id_text_senha_repetida">Repetir Senha:</label>
-					<input type="password" class="form-control" id="id_text_senha_repetida" name="text_senha_repetida" placeholder="Repetir senha do usuário" required>					
+					<input type="password" class="form-control" id="id_text_senha_repetida" name="text_senha_repetida" placeholder="Repetir senha do usuário">					
 				</div>
 
 				{{-- E-mail do Usuário --}}
 				<div class="form-group">
 					<label for="id_text_email">Endereço de e-mail:</label>
-					<input type="text" class="form-control" id="id_text_email" name="text_email" placeholder="E-mail do usuário" required>
+					<input type="text" class="form-control" id="id_text_email" name="text_email" placeholder="E-mail do usuário">
 				</div> 
 
 				{{-- Aceitação das condições do serviço --}}

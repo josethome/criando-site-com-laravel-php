@@ -12,11 +12,26 @@ class usuariosController extends Controller
     // Sistema de Usuários
     public function index() {
 
-        return view('usuario_frm_login');
+        return $this->frmLogin();
     }
 
     // Login
+    public function frmLogin() {
 
+       // Apresenta o formulário de login
+       return view('usuario_frm_login'); 
+    }
+
+    public function executarLogin(Request $request) {
+
+        // Validação
+        $this->validate($request, [
+            'text_usuario' => 'required',
+            'text_senha' => 'required'
+        ]);
+
+        return 'OK';
+    }
 
     // Recuperar senha
     public function frmRecuperarSenha(){
@@ -25,8 +40,14 @@ class usuariosController extends Controller
         return view('usuario_frm_recuperar_senha');
     }
 
-    public function executarRecuparSenha() {
+    public function executarRecuparSenha(Request $request) {
 
+        // Validação
+        $this->validate($request, [
+            'text_email' => 'required|email'
+        ]);
+
+        return 'OK';
     }
 
     // Criar nova conta
@@ -36,12 +57,22 @@ class usuariosController extends Controller
         return view('usuario_frm_criar_conta');
     }
 
-    public function executarCriacaoNovaConta() {
+    public function executarCriarNovaConta(Request $request) {
 
         //Executar os proc. e verificações para criação de uma nova conta
 
-    }
+        // Validação
+        $this->validate($request, [
+            'text_usuario' => 'required|between:3,50|alpha_num',
+            'text_senha' => 'required|between:6,32',
+            'text_senha_repetida' => 'required|same:text_senha',
+            'text_email' => 'required|email',            
+            'check_termos_condicoes' => 'accepted'
+        ]);
 
+        return 'OK';
+
+    }
 
     public function MostrarFormLogin() {
 

@@ -9,8 +9,8 @@
 		<div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-12">
 
 			{{-- Apresentação de erros de validação --}}
-			<form method="POST" action="/">
-
+			<form method="POST" action="/usuario_executar_recuperar_senha"> 
+				
 				{{-- CSRF --}}
 
 				{{ csrf_field() }} 				
@@ -18,7 +18,7 @@
 				{{-- E-mail do Usuário --}}
 				<div class="form-group">
 					<label for="id_text_email">Endereço de e-mail:</label>
-					<input type="text" class="form-control" id="id_text_email" name="text_email" placeholder="E-mail do usuário" required>
+					<input type="text" class="form-control" id="id_text_email" name="text_email" placeholder="E-mail do usuário">
 				</div> 											
 
 				{{-- Submeter/Enviar --}}

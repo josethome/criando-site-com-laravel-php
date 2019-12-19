@@ -9,8 +9,13 @@
 		<div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-12">
 
 			{{-- Apresentação de erros de validação --}}
+			@if(count($errors) != 0)
+			
+				<p>{{ count($errors) }}</p>
 
-			<form method="POST" action="/">
+			@endif
+
+			<form method="POST" action="/usuario_executar_login">
 
 				{{-- CSRF --}}
 
@@ -19,13 +24,13 @@
 				{{-- Usuário --}}
 				<div class="form-group">
 					<label for="id_text_usuario">Usuário:</label>
-					<input type="text" class="form-control" id="id_text_usuario" name="text_usuario" placeholder="Nome do usuário" required>
+					<input type="text" class="form-control" id="id_text_usuario" name="text_usuario" placeholder="Nome do usuário">
 				</div> 
 
 				{{-- Senha --}}
 				<div class="form-group">
 					<label for="id_text_senha">Senha:</label>
-					<input type="password" class="form-control" id="id_text_senha" name="text_senha" placeholder="Senha do usuário" required>					
+					<input type="password" class="form-control" id="id_text_senha" name="text_senha" placeholder="Senha do usuário">					
 				</div>
 
 				{{-- Links para criar nova conta de usuário --}}

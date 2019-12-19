@@ -45,13 +45,17 @@ Route::get('/recuperar_senha', function() {
 	return view('usuario_frm_recuperar_senha');
 });
 
-// Default
+// Sistema de Usuários - Route: Default
 Route::get('/', 'usuariosController@index');
 
 // Usuário - login
+Route::get('/usuario_frm_login', 'usuariosController@frmLogin');
+Route::post('/usuario_executar_login', 'usuariosController@executarLogin');
 
 // Usuário - recuperar senha
 Route::get('/usuario_frm_recuperar_senha', 'usuariosController@frmRecuperarSenha');
+Route::post('/usuario_executar_recuperar_senha', 'usuariosController@executarRecuparSenha');
 
 // Usuário - nova conta
 Route::get('/usuario_frm_criar_conta', 'usuariosController@frmCriarNovaConta');
+Route::post('/usuario_executar_criar_conta', 'usuariosController@executarCriarNovaConta');
