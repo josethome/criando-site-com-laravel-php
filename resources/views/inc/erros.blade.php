@@ -37,3 +37,12 @@
 @endif
 
 {{-- Apresentação dos erros de comunicação com base de dados --}}
+@if(isset($erros_bd))
+	
+	<div class="alert alert-danger">		
+		@foreach ($erros_bd as $erro)
+			<p>{{ $erro }}</p>
+		@endforeach
+	</div>
+	
+@endif

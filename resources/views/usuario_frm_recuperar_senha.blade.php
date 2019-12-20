@@ -11,7 +11,6 @@
 			{{-- Apresentação de erros de validação --}}
 			@include('inc.erros')
 
-
 			<form method="POST" action="/usuario_executar_recuperar_senha"> 
 				
 				{{-- CSRF --}}

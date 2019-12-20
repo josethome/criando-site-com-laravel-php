@@ -1,6 +1,6 @@
 @extends('layouts.usuarios')
 
-{{-- LOGIN DE USUÁRIO --}}
+{{-- LOGIN DE USUÁRIO --}} 
 
 @section('conteudo')
 
@@ -32,10 +32,10 @@
 				{{-- Links para criar nova conta de usuário --}}
 				<div class="text-center margin-top-20">
 					
-					<a href="/usuario_frm_criar_conta">Criar nova conta</a>
+					<a href="/usuario_frm_criar_conta">| Criar nova conta</a> | 
 					
 					{{-- Links para recuperar senha --}} 
-					<a href="/usuario_frm_recuperar_senha">Recuperar senha</a>				
+					<a href="/usuario_frm_recuperar_senha">Recuperar senha |</a>			
 
 				</div>				
 

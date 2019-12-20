@@ -14,7 +14,7 @@ class usuariosController extends Controller
 
         return $this->frmLogin();
     }
-
+        
     // Login
     public function frmLogin() {
 
@@ -70,8 +70,23 @@ class usuariosController extends Controller
             'check_termos_condicoes' => 'accepted'            
         ]);
 
-        return 'OK';
+        // Verifica se existe um usuário com nome ou e-mail duplicado
+        $dados = usuarios::where('usuario', "=", $request->text_usuario)
+                         ->orWhere('email', '=', $request->text_email)
+                         ->get();
+        if($dados->count() != 0) {
+            $erros_bd = ['Já existe um usuário com nome ou e-mail duplicado.'];
+            return view('usuario_frm_criar_conta', compact('erros_bd'));
+        } 
 
+        // Inserir novo usuário na base de dados
+        $novo = new usuarios;
+        $novo->usuario = $request->text_usuario;
+        $novo->senha = Hash::make($request->text_senha);
+        $novo->email = $request->text_email;
+        $novo->save();
+
+        return redirect('/');
     }
 
     public function MostrarFormLogin() {

@@ -15,6 +15,8 @@
 </head>
 <body>
 
+  <h1>Hoje</h1>
+
 	<div class="container">
 		
 		<!-- Conteúdo -->
@@ -23,7 +25,8 @@
 	</div> 
 
  <!-- jQquery (obrigatório para plugins JavaScript do Bootstrap) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src= {{ asset("js/bootstrap.min.js") }}></script> 	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
+  <script src= {{ asset("js/bootstrap.min.js") }}></script> 
+  <script src= {{ asset("js/login.js") }}></script>	
 </body>
 </html>
