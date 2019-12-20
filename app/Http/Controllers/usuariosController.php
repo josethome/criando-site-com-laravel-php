@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\usuarios;
+use Session;
 
 class usuariosController extends Controller
 {
@@ -12,7 +13,15 @@ class usuariosController extends Controller
     // Sistema de Usuários
     public function index() {
 
-        return $this->frmLogin();
+        // Verificar se existe sessão
+        if(!Session::has('login')) {
+
+            // Se não existe, retorna formulário de login
+            return $this->frmLogin();
+        }
+        else {
+            return view('aplicacao');
+        }         
     }
         
     // Login
@@ -45,7 +54,11 @@ class usuariosController extends Controller
             return view('usuario_frm_login', compact('erros_bd'));
         }
 
-        return 'OK';
+        // Criar/abrir sessão de usuário
+        Session::put('login', 'sim');
+        Session::put('usuario', $usuario->usuario);
+        
+         return redirect('/');       
     }
 
     // Recuperar senha

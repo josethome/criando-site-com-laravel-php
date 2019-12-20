@@ -59,3 +59,6 @@ Route::post('/usuario_executar_recuperar_senha', 'usuariosController@executarRec
 // Usuário - nova conta
 Route::get('/usuario_frm_criar_conta', 'usuariosController@frmCriarNovaConta');
 Route::post('/usuario_executar_criar_conta', 'usuariosController@executarCriarNovaConta');
+
+// Apresenta interior da aplicação
+Route::get('/aplicacao_index', 'aplicacaoController@apresentarPaginaInicial');

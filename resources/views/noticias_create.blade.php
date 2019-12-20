@@ -9,7 +9,7 @@
 		{{ csrf_field() }}
 		
 		<h3>Nova notícia</h3>
-
+		
 		{{-- Título da notícia --}}
 		<div class="form-group">
 			<label for="titulo">Título:</label>
@@ -20,7 +20,7 @@
 		<div class="form-group">
 			<label for="texto">Texto:</label>
 			<textarea class="form-control" id="texto" name="text_texto" placeholder="Texto da notícia" rows="10" required></textarea>			
-		</div>
+		</div> 
 
 		{{-- Autor da notícia --}}
 		<div class="form-group">

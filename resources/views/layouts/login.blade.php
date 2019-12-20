@@ -14,9 +14,7 @@
 	<title>Login - News App</title>
 </head>
 <body>
-
-  <h1>Hoje</h1>
-
+ 
 	<div class="container">
 		
 		<!-- Conteúdo -->
