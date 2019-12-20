@@ -61,6 +61,14 @@ class usuariosController extends Controller
          return redirect('/');       
     }
 
+    public function logout() {
+        //logout da sessão (destruir a sessão e redirecionar ao form login)
+
+        // Destruir a sessão
+        Session::flush();
+        return redirect('/');
+    }
+
     // Recuperar senha
     public function frmRecuperarSenha(){
 

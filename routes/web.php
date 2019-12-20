@@ -52,6 +52,9 @@ Route::get('/', 'usuariosController@index');
 Route::get('/usuario_frm_login', 'usuariosController@frmLogin');
 Route::post('/usuario_executar_login', 'usuariosController@executarLogin');
 
+// Sair do sistema
+Route::get('/usuario_logout', 'usuariosController@logout');
+
 // Usuário - recuperar senha
 Route::get('/usuario_frm_recuperar_senha', 'usuariosController@frmRecuperarSenha');
 Route::post('/usuario_executar_recuperar_senha', 'usuariosController@executarRecuparSenha');
