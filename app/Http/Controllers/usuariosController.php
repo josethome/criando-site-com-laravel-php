@@ -83,6 +83,13 @@ class usuariosController extends Controller
             'text_email' => 'required|email'
         ]);
 
+        // Vai buscar o usuário que contém a conta de e-mail indicada
+        $usuario = usuarios::where('email', $request->text_email)->get();
+        if($usuario->count() == 0) {
+            $erros_bd = ['O e-mail não está associado a nenhuma conta de usuário.'];
+            return view('usuario_frm_recuperar_senha', compact('erros_bd'));
+        }
+
         return 'OK';
     }
 
