@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\usuarios;
 use Session;
+use App\classes\geradorSenha;
 
 class usuariosController extends Controller
 {
@@ -90,7 +91,9 @@ class usuariosController extends Controller
             return view('usuario_frm_recuperar_senha', compact('erros_bd'));
         }
 
-        return 'OK';
+        $nova_senha = geradorSenha::criarCodigo();
+
+        return $nova_senha;
     }
 
     // Criar nova conta
