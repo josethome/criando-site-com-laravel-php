@@ -9,6 +9,9 @@
 		<div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-12">
 
 			{{-- Apresentação de erros de validação --}}
+			@include('inc.erros')
+
+
 			<form method="POST" action="/usuario_executar_recuperar_senha"> 
 				
 				{{-- CSRF --}}

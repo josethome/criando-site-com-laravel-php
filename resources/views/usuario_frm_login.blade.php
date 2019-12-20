@@ -9,11 +9,7 @@
 		<div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-12">
 
 			{{-- Apresentação de erros de validação --}}
-			@if(count($errors) != 0)
-			
-				<p>{{ count($errors) }}</p>
-
-			@endif
+			@include('inc.erros')
 
 			<form method="POST" action="/usuario_executar_login">
 

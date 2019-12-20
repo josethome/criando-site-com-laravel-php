@@ -67,7 +67,7 @@ class usuariosController extends Controller
             'text_senha' => 'required|between:6,32',
             'text_senha_repetida' => 'required|same:text_senha',
             'text_email' => 'required|email',            
-            'check_termos_condicoes' => 'accepted'
+            'check_termos_condicoes' => 'accepted'            
         ]);
 
         return 'OK';

@@ -9,6 +9,7 @@
 		<div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-12">
 
 			{{-- Apresentação de erros de validação --}}
+			@include('inc.erros')
 
 			<form method="POST" action="/usuario_executar_criar_conta">
 
@@ -43,7 +44,7 @@
 				{{-- Aceitação das condições do serviço --}}
 				<div class="form-group text-center">
 					
-					<input type="checkbox" id="id_check_termos_condicoes" name="check_termos_condições" value="1">
+					<input type="checkbox" id="id_check_termos_condicoes" name="check_termos_condicoes" value="1">
 					<label for="id_check_termos_condicoes"> 
 						Concordo com os termos e condições.
 					</label>
