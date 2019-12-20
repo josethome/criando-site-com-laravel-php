@@ -30,6 +30,21 @@ class usuariosController extends Controller
             'text_senha' => 'required'
         ]);
 
+        // Verificar se o usuário existe
+        $usuario = usuarios::where('usuario', $request->text_usuario)->first();
+
+        // Verifica se existe usuário
+        if(count($usuario) == 0) {
+            $erros_bd = ['Está conta de usuário não existe.'];
+            return view('usuario_frm_login', compact('erros_bd'));
+        }
+
+        // Verifica se a senha corresponde ao gravado na base de dados
+        if(!Hash::check($request->text_senha, $usuario->senha)) {
+            $erros_bd = ['Senha inválida.'];
+            return view('usuario_frm_login', compact('erros_bd'));
+        }
+
         return 'OK';
     }
 
