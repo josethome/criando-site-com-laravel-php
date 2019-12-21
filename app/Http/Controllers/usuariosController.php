@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Hash;
 use App\usuarios;
 use Session;
 use App\classes\geradorSenha;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\emailRecuperarSenha;
 
 class usuariosController extends Controller
 {
@@ -59,7 +61,7 @@ class usuariosController extends Controller
         Session::put('login', 'sim');
         Session::put('usuario', $usuario->usuario);
         
-         return redirect('/');       
+        return redirect('/');       
     }
 
     public function logout() {
@@ -91,10 +93,19 @@ class usuariosController extends Controller
             return view('usuario_frm_recuperar_senha', compact('erros_bd'));
         }
 
-        $nova_senha = geradorSenha::criarCodigo();
+        // Atualizar a senha do usuário para nova senha (senha de recuperação)
+        $usuario = $usuario->first();
 
-        return $nova_senha;
-    }
+        // Criar uma nova senha aleatória
+        $nova_senha = geradorSenha::criarCodigo();
+        $usuario->senha = Hash::make($nova_senha);       
+        $usuario->save();
+        
+        // Enviar e-mail ao usuário com nova senha
+        Mail::to($usuario->email)->send(new emailRecuperarSenha($nova_senha));
+        return 'OK';
+        //return $nova_senha;
+    } 
 
     // Criar nova conta
     public function frmCriarNovaConta() {
