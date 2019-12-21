@@ -188,7 +188,7 @@ class usuariosController extends Controller
     	// senha: 123456
 
     	// jose
-    	// senha: 123
+    	// senha: 123456
 
     	// $senha = Hash::make($request->text_senha);
     	// return($request->text_senha . ' - ' . $senha);

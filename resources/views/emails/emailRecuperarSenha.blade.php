@@ -1,6 +1,7 @@
 <h2 class="mb-5"><strong>Solicitação bem sucedida!</strong></h2>
 
-	<p>Você está recebendo este e-mail porque recebemos um pedido de redefinição de senha para sua conta.</p>
+	<p>Você está recebendo este e-mail porque recebemos um pedido de redefinição de senha para sua conta.
+	</p>
 
 	<p>Apartir deste código você poderá ter novos acessos ao sistema.</p>
 

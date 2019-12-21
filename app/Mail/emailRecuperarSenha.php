@@ -28,7 +28,7 @@ class emailRecuperarSenha extends Mailable
         // $dados = ['nova_senha' => $this->nova_senha];
         // return $this->view('emails.emailRecuperarSenha', compact('dados'));
 
-        // Método - Utilizando Array
+        // Método - Utilizando array
         return $this->view('emails.emailRecuperarSenha')->with(['nova_senha' => $this->nova_senha]);
     }
 }

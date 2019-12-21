@@ -9,8 +9,8 @@
 
 				<p class="text-muted">Foi enviado para seu e-mail uma nova senha.</p>			
 				<button class="btn btn-warning btn-lg">
-					<a href="/">
-						<span class="glyphicon glyphicon-chevron-left"></span> Voltar			
+					<a href="/">						
+						<span class="glyphicon glyphicon-chevron-left"></span> Voltar		
 					</a>
 				</button>
 
