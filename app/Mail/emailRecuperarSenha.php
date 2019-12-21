@@ -20,8 +20,15 @@ class emailRecuperarSenha extends Mailable
     
     public function build()
     {
-        $senha_nova = ['senha_nova', $this->nova_senha];
+        //$senha_nova = ['senha_nova' => $this->nova_senha];
         //return $this->view('emails.emailRecuperarSenha', compact('senha_nova'));
+        // return $this->view('emails.emailRecuperarSenha')->with(['nova_senha' => $this->nova_senha]);
+        
+        //  Método - Utilizando variável
+        // $dados = ['nova_senha' => $this->nova_senha];
+        // return $this->view('emails.emailRecuperarSenha', compact('dados'));
+
+        // Método - Utilizando Array
         return $this->view('emails.emailRecuperarSenha')->with(['nova_senha' => $this->nova_senha]);
     }
 }

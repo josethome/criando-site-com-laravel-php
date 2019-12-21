@@ -103,9 +103,15 @@ class usuariosController extends Controller
         
         // Enviar e-mail ao usuário com nova senha
         Mail::to($usuario->email)->send(new emailRecuperarSenha($nova_senha));
-        return 'OK';
-        //return $nova_senha;
+       
+        // Apresentar view ao usuário: Um e-mail foi enviado para sua caixa de mensagem
+        return redirect('/usuario_email_enviado');        
     } 
+
+    // E-mail enviado
+    public function emailEnviado() {
+        return view('usuario_email_enviado');
+    }
 
     // Criar nova conta
     public function frmCriarNovaConta() {

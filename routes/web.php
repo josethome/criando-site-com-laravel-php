@@ -58,6 +58,7 @@ Route::get('/usuario_logout', 'usuariosController@logout');
 // Usuário - recuperar senha
 Route::get('/usuario_frm_recuperar_senha', 'usuariosController@frmRecuperarSenha');
 Route::post('/usuario_executar_recuperar_senha', 'usuariosController@executarRecuparSenha');
+Route::get('/usuario_email_enviado', 'usuariosController@emailEnviado');
 
 // Usuário - nova conta
 Route::get('/usuario_frm_criar_conta', 'usuariosController@frmCriarNovaConta');

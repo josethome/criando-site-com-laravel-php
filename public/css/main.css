@@ -32,6 +32,10 @@
 	font-weight: bold;
 }
 
+.recuperar-senha a {	
+	text-decoration: none;	
+}
+
 /*input[type=text]:focus {
 	  
 }*/
